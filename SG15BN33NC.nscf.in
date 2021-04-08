@@ -1,0 +1,14 @@
+coulomb-interaction Slab 001 
+include  SG15BN33NC.ionpos 
+include  SG15BN33NC.lattice 
+ion-species SG15/$ID_ONCV_PBE.upf
+elec-cutoff 20 100
+elec-initial-charge -0.5
+elec-initial-magnetization 1 no 
+spintype z-spin
+dump-name SG15BN33NC.$VAR
+dump End DOS Momenta
+include bandstruct.randkpoints 
+fix-electron-density SG15BN33NC.$VAR 
+elec-smearing Fermi 0.0001
+elec-ex-corr gga-PBE

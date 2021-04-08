@@ -1,0 +1,13 @@
+include BN_SCFALL.in 
+wannier\ 
+bstart ${defectband}\
+saveWfnsRealSpace no
+#innerWindow ${i} ${ii}\
+ 
+#  outerWindow ${o} ${oo}\ 
+#wannier-initial-state  SG15BN${mult}${mult}${d}.$VAR
+wannier-initial-state BN${mult}${mult}${d}.$VAR
+wannier-dump-name wannierDefect${mult}${mult}${d}.$VAR
+wannier-center Gaussian  0  0  0   
+wannier-minimize niterations  10000
+
