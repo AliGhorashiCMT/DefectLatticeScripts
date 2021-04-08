@@ -1,0 +1,6 @@
+#ignore all kind of files
+*
+#except input files
+!*.in
+#also don't ignore gitignore
+!.gitignore
